@@ -1,0 +1,394 @@
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: rgb(253, 246, 246);
+}
+
+header {
+  margin-left: 5%;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin: 20px; */
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-left: 0;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(251, 215, 215);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(253, 246, 246);
+  min-width: 67px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(251, 215, 215);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.title {
+  margin-top: 150px;
+  line-height: 35px;
+  /* margin-left: 20px; */
+}
+
+.line1,
+.line2,
+.line3 {
+  white-space: nowrap; /* keep text in one line */
+  overflow: hidden; /* hide text behind the cursor */
+  letter-spacing: 0.05rem;
+}
+
+.line1 {
+  border-right: 2px solid rgb(253, 246, 246);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 1s steps(6) 1s 1 normal both,
+    animated-cursor__1 900ms steps(6, end) 3;
+}
+
+.line2 {
+  border-right: 2px solid rgb(253, 246, 246);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__2 3s steps(30) 1s 1 normal both,
+    animated-cursor__2 900ms steps(30, end) 3;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.line3 {
+  border-right: 2px solid rgb(253, 246, 246);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__3 1.5s steps(9) 1s 1 normal both,
+    animated-cursor__3 900ms steps(9, end) infinite;
+  -webkit-animation-delay: 6.3s;
+  animation-delay: 6.3s;
+}
+
+@keyframes animated-cursor__1 {
+  from {
+    border-right-color: rgba(17, 17, 17, 0.9);
+  }
+  to {
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes animated-cursor__2 {
+  from {
+    border-right-color: rgba(17, 17, 17, 0.9);
+  }
+  to {
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes animated-cursor__3 {
+  from {
+    border-right-color: rgba(17, 17, 17, 0.9);
+  }
+  to {
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes animated-text__1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 6rem;
+  }
+}
+
+@keyframes animated-text__2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18rem;
+  }
+}
+
+@keyframes animated-text__3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10rem;
+  }
+}
+
+span {
+  font-family: "Barlow", sans-serif;
+  font-size: 3 em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+
+.welcometext {
+  margin-top: 80px;
+}
+
+.welcometext > p {
+  margin-top: ;
+  font-size: 0.6 rem;
+  width: 60%;
+  margin-left: 20px;
+}
+
+.bothlines {
+  margin-top: 3rem;
+}
+
+hr {
+  border: 0.1rem solid black;
+  width: 90%;
+}
+
+.container {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  margin-left: auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.container > * {
+  padding: 1.5rem;
+  height: 100px;
+  width: 100px;
+}
+
+.container img {
+  height: 100px;
+  width: 100px;
+}
+
+.img1,
+.img4,
+.img5,
+.img8 {
+  animation: spin_1 5s infinite;
+}
+
+@keyframes spin_1 {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+.img2,
+.img3,
+.img6,
+.img7 {
+  animation: spin_2 5s infinite;
+}
+
+@keyframes spin_2 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.meetus {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  margin-left: 20px;
+  width: 90%;
+}
+
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.meetus > p {
+  font-style: italic;
+}
+
+/* This is Lisas Part*/
+
+.cardscontainer {
+  width:90vp;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+   padding: 20px;
+   Margin-top:100px;
+   width: 1;
+   height: 550px;;
+   border-radius: 40px;
+   margin-right: auto;
+   margin-left:auto;
+   cursor: pointer;
+   background-color:antiquewhite;
+   justify-content:flex-start;
+   text-align: left;
+   transition: all 0.5s linear;  
+   overflow:hidden;
+  }
+
+  .card h2 {
+  margin-bottom: 20px;
+  }
+
+  .card p {
+    line-height:15px;
+  }
+
+  .card a {
+  text-decoration-color: black;
+  color: black;
+  }
+
+  .icons {
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    
+  }
+
+  .icons img {
+    height:30px;
+    margin-right:10px;
+  }
+  
+
+  
+  
+   .active {
+    height: 800px;
+   }
+
+   .photocircle {
+    object-fit:none;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius:50%;
+    margin-left: 50%;
+    margin-top: 20px;
+    opacity:0.5;
+
+   }
+
+.slideshow-container {
+    margin-top:30px;
+    position: relative;
+}
+
+.mySlides {
+  display: none;
+  padding: 50px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+
+   
